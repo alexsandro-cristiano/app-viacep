@@ -26,7 +26,13 @@
           <form>
             <div class="form-control">
               <label for="cep">CEP</label>
-              <input name="cep" id="cep" class="form-input" type="text" placeholder="CEP" />
+              <input
+                name="cep"
+                id="cep"
+                class="form-input"
+                type="text"
+                placeholder="CEP"
+              />
               <div id="error" class="error-message"></div>
             </div>
             <div class="form-control">
@@ -62,24 +68,25 @@
                 disabled
               />
             </div>
-            <div>
-              <button type="submit">Salvar</button>
-              <button type="reset">Limpar</button>
+            <div class="btn-container">
+              <button class="btn btn-right" type="submit">Salvar</button>
+              <button class="btn btn-left" type="reset">Limpar</button>
             </div>
           </form>
         </div>
       </section>
 
-      <section id="list-section">
-        <div class="card">
+      <section id="list-section" class="list-container">
+        <div class="card-list-item">
           <h3>cidade</h3>
-          <p>endereço</p>
-          <p>cep</p>
+          <p class="address-line">endereço</p>
+          <p class="address-cep">cep</p>
         </div>
-        <div class="card">
+        
+        <div class="card-list-item">
           <h3>cidade</h3>
-          <p>endereço</p>
-          <p>cep</p>
+          <p class="address-line">endereço</p>
+          <p class="address-cep">cep</p>
         </div>
       </section>
     </main>
