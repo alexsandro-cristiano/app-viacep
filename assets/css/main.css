@@ -7,15 +7,16 @@
 
 html,
 body {
-  background-color: #000000;
+  background-color: #000;
+  font-family: "Open Sans", sans-serif;
 }
 
 .nav-container {
-  height: 80px;
-  background-color: #864af7;
+  height: 8rem;
+  background-color: #ff8400;
   width: 100%;
   padding: 0 2rem;
-  
+
   display: flex;
   align-items: center;
 }
@@ -31,7 +32,7 @@ body {
 }
 
 .nav-main h1 {
-  color: white;
+  color: #ffffff;
   font-size: 3.6rem;
   font-weight: 700;
 }
@@ -40,3 +41,47 @@ body {
   font-size: 1.8rem;
 }
 
+.form-container {
+  padding: 4rem 2rem;
+}
+
+.card-form {
+  background-color: #333;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 0.8rem;
+}
+
+.form-control {
+  margin-bottom: 2rem;
+}
+
+.form-control label {
+  display: none;
+}
+
+.form-input {
+  height: 0.5rem;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  border: 0;
+}
+
+.form-input::placeholder {
+  color: #b0b2b3;
+}
+
+.form-input:disabled {
+  background-color: #f0e9e9;
+}
+
+.error-message {
+  margin-top: 0.5rem;
+  color: #ec3b3b;
+  font-size: 1.4rem;
+  text-indent: 1.5rem;
+}

@@ -4,45 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>DSViaCep</title>
   </head>
   <body>
     <header class="nav-container">
       <nav class="nav-main">
-        <h1>CatalogViaCep</h1>
+        <h1>DSViaCep</h1>
         <div class="contact">contato</div>
       </nav>
     </header>
     <main>
-      <section id="form-section">
-        <div class="card">
+      <section id="form-section" class="form-container">
+        <div class="card-form">
           <form>
-            <div>
+            <div class="form-control">
               <label for="cep">CEP</label>
-              <input name="cep" id="cep" type="text" placeholder="CEP" />
+              <input name="cep" id="cep" class="form-input" type="text" placeholder="CEP" />
+              <div id="error" class="error-message"></div>
             </div>
-            <div>
+            <div class="form-control">
               <label for="street">Logradouro</label>
               <input
                 name="street"
                 id="street"
+                class="form-input"
                 type="text"
                 placeholder="Logradouro"
+                disabled
               />
             </div>
-            <div>
+            <div class="form-control">
               <label for="number">Número</label>
               <input
                 name="number"
                 id="number"
+                class="form-input"
                 type="text"
                 placeholder="Número"
               />
+              <div id="error" class="error-message"></div>
             </div>
-            <div>
+            <div class="form-control">
               <label for="city">Cidade</label>
-              <input name="city" id="city" type="text" placeholder="Cidade" />
+              <input
+                name="city"
+                id="city"
+                class="form-input"
+                type="text"
+                placeholder="Cidade"
+                disabled
+              />
             </div>
             <div>
               <button type="submit">Salvar</button>
