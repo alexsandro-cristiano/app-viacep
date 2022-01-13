@@ -1,5 +1,7 @@
-import Address from "../models/address.js";
+import * as listController from "./list-controller.js";
 import * as addressService from "../services/address-service.js";
+import Address from "../models/address.js";
+import { RequestException } from "../services/exceptions/request-exceptions.js";
 
 function State() {
   this.address = new Address();
@@ -16,7 +18,7 @@ function State() {
 
 function handleInputNumeberChange(event) {
   if (event.target.value == "") {
-    setError("number", "campo obrigadorio");
+    setError("number", "Informe um número");
   }
 }
 
@@ -24,10 +26,18 @@ function handleInputNumeberKeyup(event) {
   state.address.number = event.target.value;
 }
 
+function handleBtnClearForm(event) {
+  event.preventDefault();
+  clear();
+}
+
 async function handleBtnSaveClick(event) {
   event.preventDefault();
-  console.log(state.address);
+  listController.addCard(state.address);
+  clear();
 }
+
+
 
 async function handleInputCepChange(event) {
   const cep = event.target.value;
@@ -43,14 +53,10 @@ async function handleInputCepChange(event) {
     state.inputNumber.focus();
   } catch (e) {
     state.inputStreet.value = "";
+    state.inputBairro.value = "";
     state.inputCity.value = "";
     setError("cep", "Informe um CEP válido");
   }
-}
-
-function handleBtnClearForm(event) {
-  event.preventDefault();
-  clear();
 }
 
 function clear() {

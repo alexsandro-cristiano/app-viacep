@@ -1,4 +1,5 @@
-import * as formController from './controllers/form-controller.js'
+import * as formController from "./controllers/form-controller.js";
+import * as listController from "./controllers/list-controller.js";
 
 formController.init();
-console.log('ok html esta me chamando')
+listController.init();
