@@ -1,7 +1,6 @@
 import * as listController from "./list-controller.js";
 import * as addressService from "../services/address-service.js";
 import Address from "../models/address.js";
-import { RequestException } from "../services/exceptions/request-exceptions.js";
 
 function State() {
   this.address = new Address();
@@ -31,13 +30,19 @@ function handleBtnClearForm(event) {
   clear();
 }
 
-async function handleBtnSaveClick(event) {
+function handleBtnSaveClick(event) {
   event.preventDefault();
-  listController.addCard(state.address);
-  clear();
+  const errors = addressService.validarForm(state.address);
+  const keys = Object.keys(errors);
+  if (keys.length > 0) {
+    for (let i = 0; i < keys.length; i++) {
+      setError(keys[i], errors[keys[i]]);
+    }
+  } else {
+    listController.addCard(state.address);
+    clear();
+  }
 }
-
-
 
 async function handleInputCepChange(event) {
   const cep = event.target.value;
@@ -68,6 +73,7 @@ function clear() {
 
   setError("cep", "");
   setError("number", "");
+  state.address = new Address();
   state.inputCep.focus();
 }
 
