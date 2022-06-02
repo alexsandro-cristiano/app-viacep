@@ -1,29 +1,26 @@
-
 .btn-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .btn {
-    width: 25rem;
-    height: 5rem;
-    background-color: #ff8400;
-    border: 0;
-    border-radius: 0.5rem;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.4rem;
-  }
-  
-  .btn:hover {
-    background-color: #ec7e09d0;
-  }
-  
-  .btn-left {
-    margin-left: 10px;
-  }
-  
-  .btn-right {
-    margin-right: 10px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  width: 25rem;
+  height: 5rem;
+  background-color: var(--primary-color);
+  border: 0;
+  border-radius: 0.5rem;
+  color: var(--tertiary-color);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.btn-left {
+  margin-left: 10px;
+}
+
+.btn-right {
+  margin-right: 10px;
+}

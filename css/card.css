@@ -1,0 +1,23 @@
+.card-list-item {
+  background-color: var(--secundary-color);
+  width: 100%;
+  max-width: 90rem;
+  margin-bottom: 2rem;
+
+  border-radius: 0.8rem;
+  padding: 2rem;
+}
+
+.card-list-item h3 {
+  color: #ff8400;
+  font-size: 1.8rem;
+}
+
+.address-line {
+  color: var(--tertiary-color);
+  font-size: 1.4rem;
+}
+.address-cep {
+  color: #8f8f8f;
+  font-size: 1.2rem;
+}

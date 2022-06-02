@@ -21,7 +21,7 @@
   max-width: 48rem;
   padding: 2rem;
   border-radius: 1rem;
-  border: 10px solid #cf7132;
+  border: 10px solid #052f5f;
   background-color: #444444;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 }
 
 .modal-content {
-  color: #ffffff;
+  color: var(--tertiary-color);
   text-align: center;
 }
 
